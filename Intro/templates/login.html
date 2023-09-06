@@ -1,0 +1,12 @@
+<form method="POST">
+    {% csrf_token %}
+    <label for="nombre_usuario">Nombre de usuario:</label>
+    <input type="text" name="nombre_usuario" required>
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" required>
+    <label for="email">Email:</label>
+    <input type="text" name="email" required>
+    <label for="patente">Patente:</label>
+    <input type="text" name="patente">
+    <input type="submit" value="Enviar">
+</form>
