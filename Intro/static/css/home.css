@@ -1,0 +1,25 @@
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #8abebe;
+}
+.text-box {
+    box-shadow: none;
+    outline: 0px;
+    padding: 5px;
+}
+ body {
+    align-content: center;
+    position: fixed;
+    margin-left: 46%;
+ }
+ .bloque {
+    padding: 20px;
+    background: #84d5d8;
+ }
+
+ .btn {
+    margin-top: 2%;
+ }
