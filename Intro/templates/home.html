@@ -6,6 +6,31 @@
     <title>Bienvenido!!</title>
 </head>
 <body>
+
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+    <strong>Mensaje:</strong> {{ message }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
+    <span aria-hidden="true">&times;</span>        
+    </div>
+    {% endfor %}
+
+
+
     <h1>Aqui empieza todo</h1>
+
+    {% if user.is_authenticated %}
+    <h2>hola {{ nombre }}</h2>
+    <h4>Inicio de sesion con exito</h4>
+    <button type="submit"> <a href="/signout">Sign Out</a></button>
+
+    {% else %}
+    <button type="submit"> <a href="/signup">Sign Up</a></button>
+    <button type="submit"> <a href="/signin">Sign In</a></button>
+    {% endif %}
+
+
+
+
 </body>
 </html>

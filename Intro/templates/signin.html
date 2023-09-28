@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Registro</h1>
+
+    <form action="/signin" method="post">
+    {% csrf_token %}
+        <label for="">Nombre de usuario</label>
+        <input type="text" id="username" name="username" placeholder="Ingresa tu nombre de usuario" required>
+        <br>
+        <label for="">Contraseña</label>
+        <input type="password" id="pass1" name="pass1" placeholder="Ingresa tu contraseña" required>
+        <br>
+
+        <button type="submit"> Sign In</button>
+    </form>
+</body>
+</html>
