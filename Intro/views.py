@@ -29,12 +29,13 @@ def signup(request):
         usuario.save()
 
         messages.success(request, "Cuenta creada con exito.")
-        return  redirect("signin")
+        return redirect(to="signin")
     
 
-    return render(request, "signup.html")
+    return render(request, "registration/signup.html")
 
 def signin(request):
+
     if request.method == "POST":
         username = request.POST["username"]
         pass1 = request.POST["pass1"]
@@ -43,16 +44,16 @@ def signin(request):
 
         if user is not None:
             login(request, user)
-            nombre = user.nombre
-            return render(request, "home.html", {"nombre" : nombre})
+            nombre1 = user.nombre
+            return render(request, "home.html", {"nombre1" : nombre1})
 
 
         else:
             messages.error(request,"Error de confirmacion")
-            return redirect("home")
+            return redirect("registration/signin")
 
 
-    return render(request,"signin.html")
+    return render(request,"registration/signin.html")
 
 def signout(request):
     logout(request)
