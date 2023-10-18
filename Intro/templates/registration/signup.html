@@ -13,26 +13,35 @@
         <label for="">Nombre de usuario</label>
         <input type="text" id="username" name="username" placeholder="Crear nombre de usuario" required>
         <br>
+        <br>
+
         <label for="">Nombre</label>
         <input type="text" id="nombre" name="nombre" placeholder="Como te llamas" required>
+        <br>
         <br>
 
         <label for="">Patente</label>
         <input type="text" id="patente" name="patente" placeholder="Ingresa tu patente (opcional)" blank = "True">
         <br>
+        <br>
 
         <label for="">Correo electronico</label>
         <input type="email" id="email" name="email" placeholder="Direccion de Correo electronico" required>
+        <br>
         <br>
 
         <label for="">Contraseña</label>
         <input type="password" id="pass1" name="pass1" placeholder="Contraseña" required>
         <br>
+        <br>
 
         <label for="">Confirmar contraseña</label>
         <input type="password" id="pass2" name="pass2" placeholder="Confirma tu Contraseña" required>
         <br>
+        <br>
 
+        <a href="{% url 'home' %}">Volver al sitio</a> |
+        <a href="/accounts/login"">Inicia sesion</a>
         <button type="submit"> Sign UP</button>
     </form>
 </body>

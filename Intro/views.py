@@ -12,6 +12,9 @@ from django.http import HttpResponse
 def home(request):
     return render(request, 'home.html')
 
+def login(request):
+    return render(request, 'registration/login.html')
+
 
 def signup(request):
 
@@ -29,7 +32,7 @@ def signup(request):
         usuario.save()
 
         messages.success(request, "Cuenta creada con exito.")
-        return redirect(to="signin")
+        return redirect(to="login")
     
 
     return render(request, "registration/signup.html")
