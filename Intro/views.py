@@ -62,3 +62,6 @@ def signout(request):
     logout(request)
     messages.success(request, "Cierre de sesion exitoso")
     return redirect("home")
+
+def mapa(request):
+    return render(request,"mapa.html")
