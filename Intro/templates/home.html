@@ -25,6 +25,13 @@
     <h2>hola {{ nombre }}</h2>
     <h4>Inicio de sesion con exito</h4>
     <button type="submit"> <a href="/signout">Sign Out</a></button>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet/dist/leaflet.css" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js" crossorigin=""></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/mapa.css">
+    <div id="map"></div>
+    <script src="/static/js/mapa.js"></script>
+    
+
 
     {% else %}
     <button type="submit"> <a href="/signup">Sign Up</a></button>

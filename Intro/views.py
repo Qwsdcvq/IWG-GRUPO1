@@ -47,7 +47,7 @@ def signin(request):
 
         if user is not None:
             login(request, user)
-            nombre1 = user.nombre
+            nombre1 = user.username
             return render(request, "home.html", {"nombre1" : nombre1})
 
 
