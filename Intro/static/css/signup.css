@@ -1,0 +1,49 @@
+html {
+    font-family: 'Playpen Sans', cursive;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #8febeb;
+}
+section article{
+    transition: all;
+}
+body{
+    background-color: rgba(45, 197, 202, 0.822);
+    height: 400px;
+    width: 400px;
+    margin: 0 auto;
+    position: relative;
+    top: 250px;
+    border-radius: 36px;
+    padding: 15px 15px;
+    text-align: center;
+    align-content: center;
+    font-size: 12px;
+}
+h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+footer section{
+    position: bottom;
+    float: left;
+    color:ghostwhite;
+}
+
+footer a{
+    top:90%;
+    color: #000;
+    text-decoration:none;
+}
+
+footer.Texto{
+    background-color: rgba(45, 197, 202, 0.822);
+    height: 100px;
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    align-content: center;
+    border-radius: 36px;
+}

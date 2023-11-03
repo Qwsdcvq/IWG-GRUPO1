@@ -1,25 +1,125 @@
 
 html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background: #8abebe;
+   font-family: 'Playpan sans', cursive;
+   margin: 0;
+   padding: 0;
+   height: 100%;
+   background: #E7FEFF;
 }
 .text-box {
     box-shadow: none;
     outline: 0px;
-    padding: 5px;
+    padding: 10px;
 }
- body {
-    align-content: center;
+/*body {
+    align-content: center; 
     position: fixed;
-    margin-left: 46%;
- }
- .bloque {
+    margin-left: 25%;
+ }*/
+.bloque {
     padding: 20px;
     background: #84d5d8;
  }
 
- .btn {
+.btn {
     margin-top: 2%;
  }
+h1.Titulo{
+   /*margin-left: 30%;*/
+   color: #000;
+   text-align: center;
+   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   font-size: 64px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+}
+section{
+   height: 150px;
+   width: 100px;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
+.Mapa_p{
+   background-image: url("https://github.com/Qwsdcvq/IWG-GRUPO1/blob/main/Intro/static/images/Rectangle_2.png");
+   background-position: center center;
+}
+.image-1{
+   width: 103px;
+   height: 107px;
+   background-image: url("images/Rectangle_3.png"), lightgray 50% / cover no-repeat;
+}
+.image-2{
+   width: 103px;
+   height: 82px;
+   background: url("images/Rectangle_4.png"), lightgray 50% / cover no-repeat;
+}
+h2.Texto{
+   margin-left: 20%;
+   color: #000;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+}
+h3.Texto2{
+   margin-left: 20%;
+   margin-top: 10%;
+   color: #000;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+}
+h4.TextoE{
+   width: 137px;
+   height: 17px;
+   color: #000;
+   font-size: 13px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+}
+h5.Ranking{
+   margin-left: 70%;
+   color: #000;
+   font-size: 20px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+}
+h6.TextoE2{
+   color: #000;
+   font-size: 13px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+}
+h7.TextoE3{
+   color: #000;
+   text-align: center;
+   font-size: 10px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+}
+ul1.Lista_1{
+   padding-left: 20px;
+   margin-left: 100%;
+   list-style-type: none;
+   background-image: url("Intro\static\images\Ellipse_1.png");
+   background-position: 0 0;
+   background-size: 15px;
+   background-repeat: no-repeat;
+}
+ul2.Lista_2{
+   margin-left: 60%;
+   list-style-type: disc;
+}
+Cuadro_1.Cuadro{
+   width: 138px;
+   height: 357px;
+   border-radius: 35px;
+   background: #CCFBFD;
+}

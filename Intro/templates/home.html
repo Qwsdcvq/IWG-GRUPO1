@@ -4,11 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenido!!</title>
-
-
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,400;1,700&family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "/static/css/home.css"/>
 </head>
 <body>
-
+    <h1 class ="Titulo">Friendly Route</h1>
+    <h2 class="Texto">El tiempo</h2>
+    <h3 class = "Texto2"> Tienda de puntos</h3>
+    <h4 class = "TextoE">¿Aún no eres miembro?</h4>
+    <h5 class = "Ranking">Ranking</h5>
+    <h6 class = "TextoE2">¿Quieres hacer un reporte?</h6>
+    <h7 class = "TextoE3">Puntos de carga de autos electricos</h7>
+    <Cuadro_1 class ="Cuadro"></Cuadro_1>
+    <ul1 class= "Lista_1">
+        <li>Nombre: </li>
+        <li>_________________________</li>
+        <li>Nombre: </li>
+        <li>_________________________</li>
+        <li>Nombre: </li>
+        <li>_________________________</li>
+        <li>Nombre: </li>
+        <li>_________________________</li>
+        <li>Nombre: </li>
+        <li>_________________________</li>
+    </ul1>
+    <ul2 class="Lista_2">
+        <li>Lime</li>
+        <li>Ciclovias</li>
+        <li>Bicicletas Itaú</li>
+        <li>Paraderos de buses electricos</li>
+    </ul2> 
+    <section class = "Mapa_p"></section>
+    <section class = "image-1"></section>
+    <section class = "image-2"></section>
+    <section class = "Pgnomo"></section>
     {% for message in messages %}
     <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
     <strong>Mensaje:</strong> {{ message }}
@@ -16,11 +51,7 @@
     <span aria-hidden="true">&times;</span>        
     </div>
     {% endfor %}
-
-
-
-    <h1>Aqui empieza todo</h1>
-
+    
     {% if user.is_authenticated %}
     <h2>hola {{ nombre }}</h2>
     <h4>Inicio de sesion con exito</h4>
