@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -15,60 +16,57 @@
 </head>
 <body>
     <h1 class ="Titulo">Friendly Route</h1>
-    <h2 class="Texto">El tiempo</h2>
-    <h3 class = "Texto2"> Tienda de puntos</h3>
-    <h4 class = "TextoE">¿Aún no eres miembro?</h4>
-    <h5 class = "Ranking">Ranking</h5>
-    <h6 class = "TextoE2">¿Quieres hacer un reporte?</h6>
-    <h7 class = "TextoE3">Puntos de carga de autos electricos</h7>
-    <Cuadro_1 class ="Cuadro"></Cuadro_1>
-    <ul1 class= "Lista_1">
-        <li>Nombre: </li>
-        <li>_________________________</li>
-        <li>Nombre: </li>
-        <li>_________________________</li>
-        <li>Nombre: </li>
-        <li>_________________________</li>
-        <li>Nombre: </li>
-        <li>_________________________</li>
-        <li>Nombre: </li>
-        <li>_________________________</li>
-    </ul1>
-    <ul2 class="Lista_2">
-        <li>Lime</li>
-        <li>Ciclovias</li>
-        <li>Bicicletas Itaú</li>
-        <li>Paraderos de buses electricos</li>
-    </ul2> 
-    <section class = "Mapa_p"></section>
-    <section class = "image-1"></section>
-    <section class = "image-2"></section>
-    <section class = "Pgnomo"></section>
-    {% for message in messages %}
-    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-    <strong>Mensaje:</strong> {{ message }}
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
-    <span aria-hidden="true">&times;</span>        
+    <div class="bloque1">
+        <h2 style="text-align: center;">El tiempo</h2>
+        <img src="static/images/Rectangle_3.png" alt="">
+        <h3 style="text-align: center;"> Tienda de puntos</h3>
+        <img src="static/images/Rectangle_4.png" alt="">
     </div>
-    {% endfor %}
     
+    <div class="bloque2">
+        <h2 style="text-align: center;">Ranking</h2>
+        <ul>
+            <li>Nombre: </li>
+            <li>_____________________</li>
+            <li>Nombre: </li>
+            <li>_____________________</li>
+            <li>Nombre: </li>
+            <li>_____________________</li>
+            <li>Nombre: </li>
+            <li>_____________________</li>
+            <li>Nombre: </li>
+            <li>_____________________</li>
+        </ul>
+    </div>
     {% if user.is_authenticated %}
-    <h2>hola {{ nombre }}</h2>
-    <h4>Inicio de sesion con exito</h4>
-    <button type="submit"> <a href="/signout">Sign Out</a></button>
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet/dist/leaflet.css" crossorigin=""/>
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js" crossorigin=""></script>
-    <link rel="stylesheet" type="text/css" href="/static/css/mapa.css">
-    <div id="map"></div>
-    <script src="/static/js/mapa.js"></script>
-    
-
-
+    <div class="bloque3">
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet/dist/leaflet.css" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js" crossorigin=""></script>
+        <link rel="stylesheet" type="text/css" href="/static/css/mapa.css">
+        <div id="map"></div>
+        <script src="/static/js/mapa.js"></script>
+        <button type="submit"> <a href="/signout">Sign Out</a></button>
+    </div>
     {% else %}
-    <button type="submit"> <a href="/signup">Sign Up</a></button>
-    <button type="submit"> <a href="/accounts/login">Sign In</a></button>
-    {% endif %}
+    <div class="blurry">
+        <img src="static/images/Rectangle_2.png" alt="">
+        <div>
+            <button type="submit"> <a href="/signup">Sign Up</a></button>
+            <button type="submit"> <a href="/accounts/login">Sign In</a></button>
+        </div>
+    </div>
 
+    {% endif %}
+    
+    <div class="marcadores">
+        <ul2 class="Lista_2">
+            <li>Lime</li>
+            <li>Ciclovias</li>
+            <li>Bicicletas Itaú</li>
+            <li>Paraderos de buses electricos</li>
+            <li>Punto de carga autos electricos</li>
+        </ul2> 
+    </div>
 
 
 
