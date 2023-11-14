@@ -4,12 +4,14 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse
-
+from .models import Puntos
 # Create your views here.
 
 
 
 def home(request):
+    puntos_ranking = Puntos.objects.all()
+    
     return render(request, 'home.html')
 
 def login(request):

@@ -14,10 +14,10 @@ body{
     width: 400px;
     margin: 0 auto;
     position: relative;
-    top: 250px;
+    top: 120px;
     border-radius: 36px;
     padding: 15px 15px;
-    text-align: center;
+    text-align: relative;
     align-content: center;
     font-size: 12px;
 }

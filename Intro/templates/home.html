@@ -25,19 +25,25 @@
     
     <div class="bloque2">
         <h2 style="text-align: center;">Ranking</h2>
+        {% for n in puntos %}
+ 
+        {% if n not in ranking %}:
+
         <ul>
             <li>Nombre: </li>
-            <li>_____________________</li>
+            <li>___________________&nbsp&nbsp</li>
             <li>Nombre: </li>
-            <li>_____________________</li>
+            <li>___________________&nbsp&nbsp</li>
             <li>Nombre: </li>
-            <li>_____________________</li>
+            <li>___________________&nbsp&nbsp</li>
             <li>Nombre: </li>
-            <li>_____________________</li>
+            <li>___________________&nbsp&nbsp</li>
             <li>Nombre: </li>
-            <li>_____________________</li>
+            <li>___________________&nbsp&nbsp</li>
         </ul>
+        {% endfor %}
     </div>
+
     {% if user.is_authenticated %}
     <div class="bloque3">
         <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet/dist/leaflet.css" crossorigin=""/>
@@ -46,6 +52,10 @@
         <div id="map"></div>
         <script src="/static/js/mapa.js"></script>
         <button type="submit"> <a href="/signout">Sign Out</a></button>
+        <li>
+            Que gusto verte denuevo!!
+            <a href="@">{{ user.username }}</a>
+        </li>
     </div>
     {% else %}
     <div class="blurry">
@@ -57,7 +67,8 @@
     </div>
 
     {% endif %}
-    
+
+
     <div class="marcadores">
         <ul2 class="Lista_2">
             <li>Lime</li>
