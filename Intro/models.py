@@ -7,10 +7,6 @@ class User(models.Model):
     nombre = models.CharField(max_length=50)
     email = models.EmailField(unique=True)
     patente = models.CharField(max_length=9, default='', blank=True)
-
-class Puntos(models.Model):
-    nombre_usuario = models.CharField(max_length=30)
-    fecha = models.DateField()
     puntos = models.IntegerField()
 
     def __str__(self):
