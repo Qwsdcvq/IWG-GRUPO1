@@ -11,43 +11,41 @@ from django.http import HttpResponse
 def home(request):
     return render(request, 'home.html')
 
-def login(request):
+def Login(request):
+    print('4')
     return render(request, 'registration/login.html')
 
 
 def signup(request):
 
     if request.method == "POST":
-        username = request.POST["username"]
-        nombre = request.POST["nombre"]
-        email = request.POST["email"]
-        patente = request.POST["patente"]
-        pass1 = request.POST["pass1"]
-        pass2 = request.POST["pass2"]
+        form = UserForm(request.POST)
+        print('2')
+        if form.is_valid():
+            print('3')
+            user = form.save()
+            messages.success(request,'Cuenta creada con exito')
+            return redirect(to='login')
 
-        usuario = User.objects.create_user(username, email, pass1)
-        usuario.nombre = nombre
-
-        usuario.save()
-
-        messages.success(request, "Cuenta creada con exito.")
-        return redirect(to="login")
-    
-
-    return render(request, "registration/signup.html")
+    else:
+        form = UserForm()
+        print('1')
+    return render(request, "registration/signup.html",{'form':form})
 
 def signin(request):
 
     if request.method == "POST":
-        username = request.POST["username"]
-        pass1 = request.POST["pass1"]
+        form = UserForm(request.POST)
+        username =  form.cleaned_data['username']
+        pass1 = form.cleaned_data["password"]
 
         user = authenticate(username=username, password=pass1)
 
         if user is not None:
             login(request, user)
-            nombre1 = user.username
-            return render(request, "home.html", {"nombre1" : nombre1})
+            nombre = User.objects.get('username')
+            print(nombre)
+            return render(request, "home.html", {"nombre1" :nombre })
 
 
         else:
