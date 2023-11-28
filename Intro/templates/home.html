@@ -46,33 +46,61 @@
         <link rel="stylesheet" type="text/css" href="/static/css/mapa.css">
         <div id="map"></div>
         <script src="/static/js/mapa.js"></script>
+        <br>
         <button type="submit"> <a href="/signout">Sign Out</a></button>
         <li>
             Que gusto verte denuevo!!
-            <a href="/perfil">{{ user.username }}</a>
+            <button type="submit"><a href="/perfil">{{ user.username }}</a></button>
         </li>
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+              <div class="card bg-info text-white" style="border-radius: 1rem;">
+                <div class="card-body p-4 text-center">
+                    <BR clear="left">
+                        <div class="row d-flex justify-content align-items>
+                            <ul2 class="Lista_2">
+                                <li>Lime</li>
+                                <li>Ciclovias</li>
+                                <li>Bicicletas Itaú</li>
+                                <li>Paraderos de buses electricos</li>
+                                <li>Punto de carga autos electricos</li>
+                            </ul2> 
+                        </div>
+                    <BR>
+                </div>
+              </div>
+            </div>
     </div>
     {% else %}
-    <div class="blurry">
-        <img src="static/images/Rectangle_2.png" alt="">
-        <div>
-            <button type="submit"> <a href="/signup">Sign Up</a></button>
-            <button type="submit"> <a href="/accounts/login">Sign In</a></button>
+    <div align="center">
+        <div class="blurry">
+            <img src="static/images/Rectangle_2.png" alt="">
+            <div>
+                <button type="submit"> <a href="/signup">Sign Up</a></button>
+                <button type="submit"> <a href="/accounts/login">Sign In</a></button>
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                      <div class="card bg-info text-white" style="border-radius: 1rem;">
+                        <div class="card-body p-4 text-center">
+                            <BR clear="align-items-center"">
+                                <div class="row d-flex justify-content align-items>
+                                    <ul2 class="Lista_2">
+                                        <li>Lime</li>
+                                        <li>Ciclovias</li>
+                                        <li>Bicicletas Itaú</li>
+                                        <li>Paraderos de buses electricos</li>
+                                        <li>Punto de carga autos electricos</li>
+                                    </ul2> 
+                                </div>
+                            <BR>
+                        </div>
+                      </div>
+                    </div>
+            </div>
         </div>
     </div>
 
     {% endif %}
-    
-    <div class="marcadores">
-        <ul2 class="Lista_2">
-            <li>Lime</li>
-            <li>Ciclovias</li>
-            <li>Bicicletas Itaú</li>
-            <li>Paraderos de buses electricos</li>
-            <li>Punto de carga autos electricos</li>
-        </ul2> 
-    </div>
-
 
 
 </body>

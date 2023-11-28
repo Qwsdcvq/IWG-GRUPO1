@@ -12,7 +12,6 @@ def home(request):
     return render(request, 'home.html')
 
 def login(request):
-    print('4')
     return render(request, 'registration/login.html')
 
 
@@ -20,16 +19,13 @@ def signup(request):
 
     if request.method == "POST":
         form = CustomUserCreationForm(request.POST)
-        print('2')
         if form.is_valid():
-            print('3')
             user = form.save()
             messages.success(request,'Cuenta creada con exito')
             return redirect(to='login')
 
     else:
         form = CustomUserCreationForm()
-        print('1')
     return render(request, "registration/signup.html",{'form':form})
 
 def signin(request):
