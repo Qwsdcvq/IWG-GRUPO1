@@ -26,16 +26,11 @@
     <div class="bloque2">
         <h2 style="text-align: center;">Ranking</h2>
         <ul>
-            <li>Nombre: </li>
-            <li>___________________&nbsp&nbsp</li>
-            <li>Nombre: </li>
-            <li>___________________&nbsp&nbsp</li>
-            <li>Nombre: </li>
-            <li>___________________&nbsp&nbsp</li>
-            <li>Nombre: </li>
-            <li>___________________&nbsp&nbsp</li>
-            <li>Nombre: </li>
-            <li>___________________&nbsp&nbsp</li>
+            {% for item in usuarios %}
+            <li>{{ item.username }}</li>
+            <li>{{ item.puntos }}</li> 
+            <br><hr>
+            {% endfor %}
         </ul>
     </div>
 

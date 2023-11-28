@@ -4,12 +4,18 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse
+from .models import CustomUser
 # Create your views here.
 
 
 
 def home(request):
-    return render(request, 'home.html')
+
+    usuarios = CustomUser.objects.all().order_by("puntos")
+    print(usuarios)
+    return render(request, 'home.html', {'usuarios': usuarios})
+
+
 
 def login(request):
     return render(request, 'registration/login.html')
@@ -52,6 +58,11 @@ def signin(request):
     return render(request,"registration/signin.html")
 
 def signout(request):
+    print('6')
+    name  = request.user.username
+    puntos = request.user.puntos
+    a = int(puntos) + 100
+    CustomUser.objects.filter(username =name).update(puntos = a)
     logout(request)
     messages.success(request, "Cierre de sesion exitoso")
     return redirect("home")
