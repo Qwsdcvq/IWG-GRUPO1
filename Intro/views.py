@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .forms import UserForm
+from .forms import CustomUserCreationForm
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
@@ -11,7 +11,7 @@ from django.http import HttpResponse
 def home(request):
     return render(request, 'home.html')
 
-def Login(request):
+def login(request):
     print('4')
     return render(request, 'registration/login.html')
 
@@ -19,7 +19,7 @@ def Login(request):
 def signup(request):
 
     if request.method == "POST":
-        form = UserForm(request.POST)
+        form = CustomUserCreationForm(request.POST)
         print('2')
         if form.is_valid():
             print('3')
@@ -28,14 +28,14 @@ def signup(request):
             return redirect(to='login')
 
     else:
-        form = UserForm()
+        form = CustomUserCreationForm()
         print('1')
     return render(request, "registration/signup.html",{'form':form})
 
 def signin(request):
 
     if request.method == "POST":
-        form = UserForm(request.POST)
+        form = CustomUserCreationForm(request.POST)
         username =  form.cleaned_data['username']
         pass1 = form.cleaned_data["password"]
 

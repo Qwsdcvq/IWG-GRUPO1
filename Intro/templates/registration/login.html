@@ -29,14 +29,15 @@
                         {% csrf_token %}
                         {{form.as_p}}
                         {{ form.errors }}
-                    </div>      
+                    </div>    
+                    </form>
                     <p class="mb-7 pb-lg-2"><a class="text-white-50" href="{% url 'home' %}">Volver al sitio</a></p>
       
                     <button class="btn btn-outline-light btn-lg px-3" input type="submit" value="Ingresar">Ingresar</button>
                   <br>
                   <br>
                   <div>
-                    <p class="mb-0 pb-lg-2">¿Aun no tienes una cuenta? <a href="/signup" class="text-white-50 fw-bold">Registrate aqui</a>
+                    <p class="mb-0 pb-lg-2">¿Aun no tienes una cuenta? <a href="signup/" class="text-white-50 fw-bold">Registrate aqui</a>
                     </p>
                   </div>
       
